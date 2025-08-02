@@ -47,7 +47,7 @@ func sync( //nolint:cyclop,funlen
 		return errors.Wrap(err, "fetching data")
 	}
 
-	remoteState, err := api.GenerateDiffState(feeds)
+	remoteState, err := api.GenerateDiffState(feeds, categories)
 	if err != nil {
 		return errors.Wrap(err, "generating remote state")
 	}
